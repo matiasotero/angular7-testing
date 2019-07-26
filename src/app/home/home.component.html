@@ -1,0 +1,31 @@
+<!--In this case, you can use this type of property to enable/disable a class
+which was previously declared in a style sheet file as css/scss-->
+<!-- <h1 [class.gray]="h1Style">Home</h1> -->
+
+<!--In this case, you can use this property that renders classes using variables-->
+<!-- <h1 [ngClass]="{
+    'gray': h1Style,
+    'large': !h1Style
+}">Home</h1> -->
+
+<!--In this case you can use the property of styles to access to any css property using. 
+    besides it can use variables in a condition-->
+<!-- <h1 [style.color]="h1Style ? 'gray' : 'black'">Home</h1> -->
+
+<!--It is another way to access to css properties. Using ngStyle you can declare an object 
+    with any css properties an their values-->
+<!-- <h1 [ngStyle]="{
+    'color': h1Style ? 'gray' : 'black',
+    'font-size': h1Style ? '1em' : '4em'
+}">Home</h1> -->
+
+<h1>Home</h1>
+
+<!-- <button (click)="firstClick()">Click Me</button> -->
+
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+        <img [src]="user.avatar"/>
+        <p>{{ user.first_name }} {{ user.last_name }}</p>
+    </li>
+</ul>
